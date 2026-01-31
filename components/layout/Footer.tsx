@@ -8,9 +8,9 @@ export function Footer() {
     <footer className="border-t border-border">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between">
         <div className="space-y-2">
-          <p className="text-sm font-medium">Your Name</p>
+          <p className="text-sm font-medium">{portfolioData.hero.name}</p>
           <p className="text-sm text-muted-foreground">
-            Frontend Engineer · {portfolioData.contact.location}
+            {portfolioData.hero.role} · {portfolioData.contact.location}
           </p>
         </div>
         <div className="flex flex-col gap-3 text-sm text-muted-foreground md:flex-row md:items-center md:gap-6">
@@ -25,7 +25,7 @@ export function Footer() {
           ))}
         </div>
         <p className="text-xs text-muted-foreground">
-          © {year} Your Name. All rights reserved.
+          © {year} {portfolioData.hero.name}. All rights reserved.
         </p>
       </div>
     </footer>

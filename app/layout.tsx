@@ -15,15 +15,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Your Name — Frontend Engineer",
-    template: "%s · Your Name",
+    default: "Aki-Petteri Kuivas - Full-stack Developer",
+    template: "%s - Aki-Petteri Kuivas",
   },
   description:
-    "Portfolio showcasing projects, skills, and experience with a focus on accessible, high-performance UI.",
+    "Full-stack developer building cross-platform apps and reliable web systems with React, React Native, and Node.js.",
   openGraph: {
-    title: "Your Name — Frontend Engineer",
+    title: "Aki-Petteri Kuivas - Full-stack Developer",
     description:
-      "Portfolio showcasing projects, skills, and experience with a focus on accessible, high-performance UI.",
+      "Full-stack developer building cross-platform apps and reliable web systems with React, React Native, and Node.js.",
     type: "website",
   },
 };
@@ -35,9 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
