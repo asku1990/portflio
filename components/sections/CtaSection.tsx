@@ -11,7 +11,7 @@ export function CtaSection() {
   const [showDownloadNote, setShowDownloadNote] = useState(false);
 
   return (
-    <section id="cta" className="py-16 md:py-24">
+    <section id="cta" className="scroll-mt-24 py-16 md:py-24">
       <div className="mx-auto w-full max-w-6xl px-6">
         <Card className="border-border/60 bg-muted/40">
           <CardContent className="flex flex-col gap-6 p-8 md:flex-row md:items-center md:justify-between">

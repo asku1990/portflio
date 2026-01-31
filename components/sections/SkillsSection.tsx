@@ -6,7 +6,7 @@ export function SkillsSection() {
   const { skills } = portfolioData;
 
   return (
-    <section id="skills" className="py-16 md:py-24">
+    <section id="skills" className="scroll-mt-24 py-16 md:py-24">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6">
         <div className="space-y-2">
           <h2 className="text-3xl font-semibold tracking-tight">Skills</h2>
