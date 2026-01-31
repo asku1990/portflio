@@ -26,8 +26,11 @@ export function ProjectsSection() {
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
             <Card key={project.title} className="flex h-full flex-col">
-              <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
+              <CardHeader className="space-y-2">
+                <div className="flex flex-wrap items-center gap-2">
+                  <CardTitle>{project.title}</CardTitle>
+                  <Badge variant="outline">{project.projectType}</Badge>
+                </div>
                 <CardDescription>{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex flex-wrap gap-2">

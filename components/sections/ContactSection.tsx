@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -6,14 +9,13 @@ import { portfolioData } from "@/data/portfolio";
 
 export function ContactSection() {
   const { contact } = portfolioData;
+  const [showFormNote, setShowFormNote] = useState(false);
 
   return (
     <section id="contact" className="py-16 md:py-24">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 md:grid-cols-2">
         <div className="space-y-4">
-          <h2 className="text-3xl font-semibold tracking-tight">
-            {contact.title}
-          </h2>
+          <h2 className="text-3xl font-semibold tracking-tight">{contact.title}</h2>
           <p className="text-muted-foreground">{contact.description}</p>
           <div className="space-y-2 text-sm text-muted-foreground">
             <p>
@@ -52,9 +54,14 @@ export function ContactSection() {
               <Input placeholder="Email address" type="email" />
               <Input placeholder="How can I help?" />
             </div>
-            <Button type="button" className="w-full">
+            <Button type="button" className="w-full" onClick={() => setShowFormNote(true)}>
               Send message
             </Button>
+            {showFormNote ? (
+              <p className="text-sm text-muted-foreground" aria-live="polite">
+                Message sending is a future feature.
+              </p>
+            ) : null}
           </CardContent>
         </Card>
       </div>

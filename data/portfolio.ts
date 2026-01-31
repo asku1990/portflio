@@ -3,6 +3,11 @@ export type Link = {
   href: string;
 };
 
+export type DownloadAction = {
+  label: string;
+  note: string;
+};
+
 export type Hero = {
   name: string;
   role: string;
@@ -25,6 +30,7 @@ export type About = {
 
 export type Project = {
   title: string;
+  projectType: "Personal" | "Company";
   description: string;
   tags: string[];
   image: string;
@@ -60,6 +66,7 @@ export type CallToAction = {
   description: string;
   primary: Link;
   secondary: Link;
+  download: DownloadAction;
 };
 
 export type PortfolioData = {
@@ -117,6 +124,7 @@ export const portfolioData: PortfolioData = {
   projects: [
     {
       title: "Resume-and-CV Platform",
+      projectType: "Personal",
       description:
         "A web-based resume platform built with React and Node.js/Express, backed by MySQL and JWT authentication. Includes sections for contact info, language skills, and recommendations, with admin pages for user management. Previously hosted on Heroku (currently offline).",
       tags: ["React", "Node.js", "Express", "MySQL", "JWT", "Heroku"],
@@ -134,6 +142,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: "Help Tool v1 (Car Management)",
+      projectType: "Personal",
       description:
         "A car expenses tracker built with Next.js and Prisma, hosted on Vercel with a Neon PostgreSQL database. Tracks vehicles, fuel fill-ups, expenses, and L/100km + cost/km stats.",
       tags: [
@@ -151,6 +160,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: "Gaming CMS Content Tools",
+      projectType: "Company",
       description:
         "Collaborated with the CMS team to improve the user experience for maintaining game content, focusing on content workflows and reliable updates.",
       tags: ["CMS", "Content Workflows", "UX", "Tailwind CSS", "shadcn/ui"],
@@ -159,6 +169,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: "Cross-Platform Prototypes",
+      projectType: "Company",
       description:
         "Built iOS and Android prototypes from existing Java apps using React Native and Expo. Delivered configuration and remote monitoring apps and integrated push notifications via Node.js, FCM, and APNs.",
       tags: ["React Native", "Expo", "Node.js", "FCM", "APNs"],
@@ -167,6 +178,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: "Portable Band Saw UI",
+      projectType: "Company",
       description:
         "Designed and implemented part of a Raspberry Pi-based UI for a portable band saw using Python, Tkinter, and MQTT.",
       tags: ["Python", "Tkinter", "MQTT", "Raspberry Pi"],
@@ -281,6 +293,10 @@ export const portfolioData: PortfolioData = {
     secondary: {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/akikuivas",
+    },
+    download: {
+      label: "Download CV",
+      note: "CV download is a future feature.",
     },
   },
 };
