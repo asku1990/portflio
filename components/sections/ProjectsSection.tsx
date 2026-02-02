@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -9,10 +13,19 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { portfolioData } from "@/data/portfolio";
+import type { Project } from "@/data/portfolio";
 
 export function ProjectsSection() {
   const { projects } = portfolioData;
+  const [detailsProject, setDetailsProject] = useState<Project | null>(null);
 
   return (
     <section id="projects" className="scroll-mt-24 py-16 md:py-24">
@@ -30,6 +43,7 @@ export function ProjectsSection() {
                 <div className="flex flex-wrap items-center gap-2">
                   <CardTitle>{project.title}</CardTitle>
                   <Badge variant="outline">{project.projectType}</Badge>
+                  {project.company && <Badge variant="secondary">{project.company}</Badge>}
                 </div>
                 <CardDescription>{project.description}</CardDescription>
               </CardHeader>
@@ -41,6 +55,11 @@ export function ProjectsSection() {
                 ))}
               </CardContent>
               <CardFooter className="mt-auto flex flex-wrap gap-3">
+                {project.details && (
+                  <Button variant="outline" onClick={() => setDetailsProject(project)}>
+                    Details
+                  </Button>
+                )}
                 {project.links.map((link) => (
                   <Button
                     key={`${project.title}-${link.label}-${link.href}`}
@@ -55,6 +74,83 @@ export function ProjectsSection() {
           ))}
         </div>
       </div>
+
+      <Dialog
+        open={detailsProject !== null}
+        onOpenChange={(open) => {
+          if (!open) setDetailsProject(null);
+        }}
+      >
+        <DialogContent
+          className="max-h-[90vh] max-w-2xl overflow-y-auto sm:max-w-2xl"
+          showCloseButton
+        >
+          {detailsProject?.details && (
+            <>
+              <DialogHeader>
+                <div className="flex flex-wrap items-center gap-2">
+                  <DialogTitle>{detailsProject.title}</DialogTitle>
+                  <Badge variant="outline">{detailsProject.projectType}</Badge>
+                  {detailsProject.company && (
+                    <Badge variant="secondary">{detailsProject.company}</Badge>
+                  )}
+                </div>
+                <DialogDescription>{detailsProject.description}</DialogDescription>
+              </DialogHeader>
+              <div className="flex flex-wrap gap-2">
+                {detailsProject.tags.map((tag) => (
+                  <Badge key={tag} variant="secondary">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+              {detailsProject.details.overview && (
+                <p className="text-muted-foreground text-sm">{detailsProject.details.overview}</p>
+              )}
+              <div className="space-y-4">
+                {detailsProject.details.sections.map((section) => (
+                  <div key={section.heading} className="space-y-2">
+                    <h4 className="font-semibold">{section.heading}</h4>
+                    <p className="text-muted-foreground text-sm">{section.body}</p>
+                    {section.bullets && section.bullets.length > 0 && (
+                      <ul className="text-muted-foreground list-inside list-disc text-sm">
+                        {section.bullets.map((bullet, i) => (
+                          <li key={i}>{bullet}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+              {detailsProject.details.media && detailsProject.details.media.length > 0 && (
+                <div className="space-y-2">
+                  {detailsProject.details.media.map((item, i) => (
+                    <figure key={i} className="space-y-1">
+                      {item.kind === "image" ? (
+                        <Image
+                          src={item.src}
+                          alt={item.alt ?? ""}
+                          width={800}
+                          height={450}
+                          className="rounded-md border object-contain"
+                          unoptimized
+                        />
+                      ) : (
+                        <video src={item.src} controls className="rounded-md border w-full" />
+                      )}
+                      {item.caption && (
+                        <figcaption className="text-muted-foreground text-xs">
+                          {item.caption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  ))}
+                </div>
+              )}
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }

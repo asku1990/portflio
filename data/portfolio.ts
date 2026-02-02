@@ -28,13 +28,34 @@ export type About = {
   }>;
 };
 
+export type ProjectDetailsSection = {
+  heading: string;
+  body: string;
+  bullets?: string[];
+};
+
+export type ProjectDetailsMedia = {
+  kind: "image" | "video";
+  src: string;
+  alt?: string;
+  caption?: string;
+};
+
+export type ProjectDetails = {
+  overview?: string;
+  sections: ProjectDetailsSection[];
+  media?: ProjectDetailsMedia[];
+};
+
 export type Project = {
   title: string;
   projectType: "Personal" | "Company";
+  company?: string;
   description: string;
   tags: string[];
   image: string;
   links: Link[];
+  details?: ProjectDetails;
 };
 
 export type SkillGroup = {
@@ -133,6 +154,56 @@ export const portfolioData: PortfolioData = {
   },
   projects: [
     {
+      title: "Gaming CMS Content Tools",
+      projectType: "Company",
+      company: "BeyondOS",
+      description:
+        "Collaborated with the CMS team to improve the user experience of maintaining game content, with a focus on clear workflows and reliable updates.",
+      tags: [
+        "CMS",
+        "Content Workflows",
+        "UX",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Next.js",
+        "TypeScript",
+        "Prisma",
+        "MySQL",
+        "Postman",
+        "AWS EC2",
+        "AWS S3",
+      ],
+      image: "/window.svg",
+      links: [{ label: "Contact", href: "#contact" }],
+      details: {
+        overview:
+          "A case study on planning and delivering a solid CMS platform for game content, in close collaboration with the CMS team.",
+        sections: [
+          {
+            heading: "Problem",
+            body: "The existing gaming CMS no longer supported the evolving needs of the product or the CMS team. Content workflows were difficult to maintain, usability issues slowed down daily work, and the structure did not scale well as new content types and features were added. There was a clear need for a more flexible, maintainable, and user-friendly solution.",
+            bullets: [],
+          },
+          {
+            heading: "Role & approach",
+            body: "I took ownership of designing a new CMS from scratch, using the existing system as a reference to identify what worked and what needed improvement. This included planning structure, workflows, and UI patterns before implementation. I worked closely with another developer and the CMS team to understand real workflow requirements, iterate on ideas, and validate design decisions early. The goal was to improve usability and reliability without disrupting ongoing development.",
+            bullets: [],
+          },
+          {
+            heading: "Technical challenges & solutions",
+            body: "Key challenges included redesigning content workflows, defining clearer data structures, and building an interface that remained intuitive while supporting complex content needs. We addressed these by simplifying UI patterns, improving validation and feedback, and aligning frontend and backend changes to support predictable and safe content updates. This required careful coordination between frontend components, backend APIs, and database models to ensure consistency across environments.",
+            bullets: [],
+          },
+          {
+            heading: "Outcomes",
+            body: "The new CMS design significantly improved usability and made content management more efficient for the CMS team. Workflows became clearer, maintenance became easier, and the system provided a stronger foundation for future development. This project demonstrates my ability to design systems from the ground up, collaborate closely with cross-functional teams, and deliver practical solutions in a production environment.",
+            bullets: [],
+          },
+        ],
+        media: [],
+      },
+    },
+    {
       title: "Resume-and-CV Platform",
       projectType: "Personal",
       description:
@@ -169,15 +240,6 @@ export const portfolioData: PortfolioData = {
       links: [{ label: "Repository", href: "https://github.com/asku1990/help-tool-v1" }],
     },
     {
-      title: "Gaming CMS Content Tools",
-      projectType: "Company",
-      description:
-        "Collaborated with the CMS team to improve the user experience for maintaining game content, focusing on content workflows and reliable updates.",
-      tags: ["CMS", "Content Workflows", "UX", "Tailwind CSS", "shadcn/ui"],
-      image: "/window.svg",
-      links: [{ label: "Details on request", href: "#contact" }],
-    },
-    {
       title: "Cross-Platform Prototypes",
       projectType: "Company",
       description:
@@ -204,6 +266,7 @@ export const portfolioData: PortfolioData = {
       {
         category: "Frontend",
         items: [
+          "TypeScript",
           "Next.js",
           "React",
           "Tailwind CSS",
@@ -237,7 +300,8 @@ export const portfolioData: PortfolioData = {
         items: [
           "Git",
           "Docker",
-          "AWS (S3)",
+          "AWS (EC2, S3)",
+          "Postman",
           "Vercel",
           "Netlify",
           "Heroku",
