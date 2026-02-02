@@ -42,6 +42,12 @@ export type SkillGroup = {
   items: string[];
 };
 
+export type Skills = {
+  title: string;
+  description: string;
+  groups: SkillGroup[];
+};
+
 export type Experience = {
   company: string;
   role: string;
@@ -73,7 +79,7 @@ export type PortfolioData = {
   hero: Hero;
   about: About;
   projects: Project[];
-  skills: SkillGroup[];
+  skills: Skills;
   experience: Experience[];
   contact: Contact;
   cta: CallToAction;
@@ -101,24 +107,28 @@ export const portfolioData: PortfolioData = {
   about: {
     title: "About",
     paragraphs: [
-      "I started in electrical engineering and spent over a decade in construction logistics before pivoting into software development in 2021. I graduated from Oulu University of Applied Sciences (OAMK) in 03/2025 while working in software roles.",
-      "At Monidor, I built cross-platform prototypes for iOS and Android using React Native and Expo, including configuration and remote monitoring apps. My thesis focused on push notifications in cross-platform development.",
-      "I recently worked at BeyondOS across multiple company projects, collaborating with the CMS team on a gaming CMS to improve user experience and support content maintenance, and am now actively seeking a new role.",
+      "My background includes electrical and automation engineering studies and over ten years in the construction product industry, before transitioning into software development in 2021. I graduated from Oulu University of Applied Sciences (OAMK) with a Bachelor of Engineering in 03/2025 while working in software development roles.",
+      "At Monidor, I built cross-platform prototypes for iOS and Android using React Native and Expo, including configuration and remote monitoring applications. My thesis focused on implementing push notifications in cross-platform environments.",
+      "Most recently, I worked at BeyondOS across multiple company projects, collaborating closely with the CMS team on a gaming content management system. My work focused on improving user experience.",
     ],
     highlights: [
       {
         label: "Most recent role",
-        value: "Full-stack Developer at BeyondOS (ended Jan 2026)",
+        value: "Full-stack Developer at BeyondOS (Jan 2025 – Jan 2026)",
       },
       {
         label: "Education",
-        value: "BEng in Information Technology, OAMK (03/2025)",
+        value: "BEng in Information Technology, Oulu University of Applied Sciences (03/2025)",
       },
       {
         label: "Focus",
-        value: "Cross-platform apps with React Native and Expo",
+        value: "Web application development with Next.js and React.",
       },
-      { label: "Thesis", value: "Push notifications in cross-platform apps" },
+      {
+        label: "Thesis",
+        value:
+          "Push notifications in a cross-platform application: a prototype of a routing server and Android/iOS apps.",
+      },
     ],
   },
   projects: [
@@ -186,61 +196,70 @@ export const portfolioData: PortfolioData = {
       links: [{ label: "Details on request", href: "#contact" }],
     },
   ],
-  skills: [
-    {
-      category: "Frontend",
-      items: [
-        "React",
-        "Next.js",
-        "React Native",
-        "Expo",
-        "Tailwind CSS",
-        "shadcn/ui",
-        "TanStack Query",
-      ],
-    },
-    {
-      category: "Backend",
-      items: [
-        "Node.js",
-        "Express",
-        "MySQL",
-        "PostgreSQL",
-        "Prisma",
-        "Drizzle",
-        "SQL",
-        "JWT",
-        "NextAuth",
-      ],
-    },
-    {
-      category: "Automation and IoT",
-      items: ["Python", "Tkinter", "MQTT", "Raspberry Pi"],
-    },
-    {
-      category: "Tooling",
-      items: [
-        "Git",
-        "Docker",
-        "Vercel",
-        "Heroku",
-        "Visual Studio Code",
-        "OpenAI Codex CLI",
-        "Cursor IDE",
-        "Xcode",
-        "Android Studio",
-        "GitHub",
-        "Bitbucket",
-        "Notion",
-        "Linear",
-        "Jira",
-      ],
-    },
-    {
-      category: "Languages",
-      items: ["Finnish (Native)", "English (Good)", "Swedish (Basic)"],
-    },
-  ],
+  skills: {
+    title: "Skills",
+    description:
+      "A snapshot of the tools and disciplines I work with daily, including AI-assisted development workflows.",
+    groups: [
+      {
+        category: "Frontend",
+        items: [
+          "Next.js",
+          "React",
+          "Tailwind CSS",
+          "shadcn/ui",
+          "TanStack Query",
+          "React Native",
+          "Expo",
+        ],
+      },
+      {
+        category: "Backend",
+        items: [
+          "Node.js",
+          "Express",
+          "PostgreSQL",
+          "MySQL",
+          "Prisma",
+          "Drizzle",
+          "Supabase",
+          "SQL",
+          "JWT",
+          "NextAuth",
+        ],
+      },
+      {
+        category: "Automation and IoT",
+        items: ["Python", "Tkinter", "MQTT", "Raspberry Pi"],
+      },
+      {
+        category: "Tooling",
+        items: [
+          "Git",
+          "Docker",
+          "AWS (S3)",
+          "Vercel",
+          "Netlify",
+          "Heroku",
+          "Neon (PostgreSQL)",
+          "GitHub",
+          "Bitbucket",
+          "Visual Studio Code",
+          "Cursor IDE",
+          "OpenAI Codex CLI",
+          "Xcode",
+          "Android Studio",
+          "Notion",
+          "Linear",
+          "Jira",
+        ],
+      },
+      {
+        category: "Languages",
+        items: ["Finnish (Native)", "English (Good)", "Swedish (Basic)"],
+      },
+    ],
+  },
   experience: [
     {
       company: "BeyondOS",
