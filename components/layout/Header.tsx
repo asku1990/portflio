@@ -1,10 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, type MouseEvent } from "react";
 import { Button } from "@/components/ui/button";
+import iconImage from "@/app/icon.png";
 import { portfolioData } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
+
+const sectionIds = ["hero", "about", "projects", "skills", "experience", "contact"];
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -16,7 +20,7 @@ const navItems = [
 
 export function Header() {
   const { hero } = portfolioData;
-  const [activeId, setActiveId] = useState(navItems[0]?.href.replace("#", "") ?? "");
+  const [activeId, setActiveId] = useState("hero");
 
   const handleNavClick = (event: MouseEvent<HTMLAnchorElement>, sectionId: string) => {
     event.preventDefault();
@@ -29,8 +33,8 @@ export function Header() {
   };
 
   useEffect(() => {
-    const sections = navItems
-      .map((item) => document.getElementById(item.href.replace("#", "")))
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
       .filter((section): section is HTMLElement => Boolean(section));
 
     if (sections.length === 0) {
@@ -62,7 +66,22 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="#" className="text-lg font-semibold tracking-tight">
+        <Link
+          href="#hero"
+          onClick={(event) => handleNavClick(event, "hero")}
+          className={cn(
+            "flex items-center gap-2 text-lg font-semibold tracking-tight",
+            activeId === "hero" ? "text-foreground" : "text-muted-foreground hover:text-foreground",
+          )}
+          aria-current={activeId === "hero" ? "page" : undefined}
+        >
+          <Image
+            src={iconImage}
+            alt=""
+            width={32}
+            height={32}
+            className="size-8 rounded-sm object-contain"
+          />
           {hero.name}
         </Link>
         <nav className="hidden items-center gap-6 text-sm md:flex">
