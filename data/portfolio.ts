@@ -3,11 +3,6 @@ export type Link = {
   href: string;
 };
 
-export type DownloadAction = {
-  label: string;
-  note: string;
-};
-
 export type Hero = {
   name: string;
   role: string;
@@ -88,14 +83,6 @@ export type Contact = {
   }>;
 };
 
-export type CallToAction = {
-  title: string;
-  description: string;
-  primary: Link;
-  secondary: Link;
-  download: DownloadAction;
-};
-
 export type PortfolioData = {
   hero: Hero;
   about: About;
@@ -103,7 +90,6 @@ export type PortfolioData = {
   skills: Skills;
   experience: Experience[];
   contact: Contact;
-  cta: CallToAction;
 };
 
 export const portfolioData: PortfolioData = {
@@ -479,18 +465,5 @@ export const portfolioData: PortfolioData = {
       { label: "LinkedIn", href: "https://www.linkedin.com/in/akikuivas" },
       { label: "GitHub", href: "https://github.com/asku1990" },
     ],
-  },
-  cta: {
-    title: "Let's build something useful.",
-    description: "Open to roles in web, mobile, and cross-platform development.",
-    primary: { label: "Email me", href: "mailto:aki@a.kesman.eu" },
-    secondary: {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/akikuivas",
-    },
-    download: {
-      label: "Download CV",
-      note: "CV download is a future feature.",
-    },
   },
 };
