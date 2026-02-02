@@ -57,7 +57,7 @@ export function ProjectsSection() {
               <CardFooter className="mt-auto flex flex-wrap gap-3">
                 {project.details && (
                   <Button variant="outline" onClick={() => setDetailsProject(project)}>
-                    Details
+                    Case study
                   </Button>
                 )}
                 {project.links.map((link) => (

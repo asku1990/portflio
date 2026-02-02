@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { portfolioData } from "@/data/portfolio";
 
 export function Footer() {
@@ -6,24 +5,10 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between">
-        <div className="space-y-2">
-          <p className="text-sm font-medium">{portfolioData.hero.name}</p>
-          <p className="text-sm text-muted-foreground">
-            {portfolioData.hero.role} · {portfolioData.contact.location}
-          </p>
-        </div>
-        <div className="flex flex-col gap-3 text-sm text-muted-foreground md:flex-row md:items-center md:gap-6">
-          {portfolioData.contact.socials.map((social) => (
-            <Link
-              key={social.href}
-              href={social.href}
-              className="transition-colors hover:text-foreground"
-            >
-              {social.label}
-            </Link>
-          ))}
-        </div>
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-sm text-muted-foreground">
+          {portfolioData.hero.name} · {portfolioData.hero.role} · {portfolioData.contact.location}
+        </p>
         <p className="text-xs text-muted-foreground">
           © {year} {portfolioData.hero.name}. All rights reserved.
         </p>

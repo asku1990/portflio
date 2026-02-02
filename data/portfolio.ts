@@ -112,10 +112,9 @@ export const portfolioData: PortfolioData = {
     role: "Full-stack Developer",
     tagline: "Building cross-platform apps and reliable web systems.",
     summary:
-      "Full-stack developer with experience building cross-platform prototypes and web apps using React, React Native, and Node.js. Recently worked at BeyondOS across multiple company projects, including a gaming CMS built with the CMS team, focusing on user experience and helping the CMS team maintain game content.",
+      "Web-focused full-stack developer (Next.js, React) in Oulu, Finland. Open to web and mobile roles.",
     location: "Oulu, Finland",
-    availability:
-      "Available immediately and open to new opportunities in web and mobile development.",
+    availability: "Available for web and mobile development roles.",
     ctaPrimary: {
       label: "View Projects",
       href: "#projects",
@@ -129,7 +128,7 @@ export const portfolioData: PortfolioData = {
     title: "About",
     paragraphs: [
       "My background includes electrical and automation engineering studies and over ten years in the construction product industry, before transitioning into software development in 2021. I graduated from Oulu University of Applied Sciences (OAMK) with a Bachelor of Engineering in 03/2025 while working in software development roles.",
-      "At Monidor, I built cross-platform prototypes for iOS and Android using React Native and Expo, including configuration and remote monitoring applications. My thesis focused on implementing push notifications in cross-platform environments.",
+      "At Monidor, I built cross-platform prototypes for iOS and Android using React Native and Expo, including configuration and remote monitoring applications. My thesis focused on push notifications in a cross-platform application: a prototype of a routing server and Android/iOS apps.",
       "Most recently, I worked at BeyondOS across multiple company projects, collaborating closely with the CMS team on a gaming content management system. My work focused on improving user experience.",
     ],
     highlights: [
@@ -360,8 +359,8 @@ export const portfolioData: PortfolioData = {
     },
   ],
   contact: {
-    title: "Contact",
-    description: "Actively searching for a new role. Open to full-time roles and collaboration.",
+    title: "Let's connect",
+    description: "Open to new roles and collaborations. Oulu, Finland.",
     email: "aki@a.kesman.eu",
     location: "Oulu, Finland",
     socials: [
