@@ -173,7 +173,7 @@ export const portfolioData: PortfolioData = {
         "AWS S3",
       ],
       image: "/window.svg",
-      links: [{ label: "Contact", href: "#contact" }],
+      links: [],
       details: {
         overview:
           "A case study on planning and delivering a solid CMS platform for game content, in close collaboration with the CMS team.",
@@ -196,6 +196,43 @@ export const portfolioData: PortfolioData = {
           {
             heading: "Outcomes",
             body: "The new CMS design significantly improved usability and made content management more efficient for the CMS team. Workflows became clearer, maintenance became easier, and the system provided a stronger foundation for future development. This project demonstrates my ability to design systems from the ground up, collaborate closely with cross-functional teams, and deliver practical solutions in a production environment.",
+            bullets: [],
+          },
+        ],
+        media: [],
+      },
+    },
+    {
+      title: "Cross-Platform Prototypes",
+      projectType: "Company",
+      company: "Monidor Oy",
+      description:
+        "Built iOS and Android prototypes from existing Java apps using React Native and Expo. Delivered configuration and remote monitoring apps and integrated push notifications via Node.js, FCM, and APNs.",
+      tags: ["React Native", "Expo", "Node.js", "FCM", "APNs"],
+      image: "/window.svg",
+      links: [],
+      details: {
+        overview:
+          "Case study on building iOS and Android prototypes from existing Java applications using React Native and Expo, including configuration and remote monitoring apps and push notifications.",
+        sections: [
+          {
+            heading: "Problem",
+            body: "The existing Java application supported Android users only. An iOS prototype was needed to support configuration, remote monitoring, and push notifications without changing the existing backend.",
+            bullets: [],
+          },
+          {
+            heading: "Role & approach",
+            body: "I built an iOS application prototype using React Native and Expo. Although iOS was the primary target, the same codebase could also run on Android, allowing quick cross-platform validation.",
+            bullets: [],
+          },
+          {
+            heading: "Technical challenges & solutions",
+            body: "The main challenge was adding push notifications for iOS without modifying the Java application. This was solved by introducing a Node.js notification service using Firebase Cloud Messaging configured for APNs.",
+            bullets: [],
+          },
+          {
+            heading: "Outcomes",
+            body: "The result was a working iOS prototype that extended the system to iOS users and validated a cross-platform approach using a single codebase.",
             bullets: [],
           },
         ],
@@ -237,15 +274,6 @@ export const portfolioData: PortfolioData = {
       ],
       image: "/globe.svg",
       links: [{ label: "Repository", href: "https://github.com/asku1990/help-tool-v1" }],
-    },
-    {
-      title: "Cross-Platform Prototypes",
-      projectType: "Company",
-      description:
-        "Built iOS and Android prototypes from existing Java apps using React Native and Expo. Delivered configuration and remote monitoring apps and integrated push notifications via Node.js, FCM, and APNs.",
-      tags: ["React Native", "Expo", "Node.js", "FCM", "APNs"],
-      image: "/window.svg",
-      links: [{ label: "Details on request", href: "#contact" }],
     },
     {
       title: "Portable Band Saw UI",
