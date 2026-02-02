@@ -208,7 +208,19 @@ export const portfolioData: PortfolioData = {
       company: "Monidor Oy",
       description:
         "Built iOS and Android prototypes from existing Java apps using React Native and Expo. Delivered configuration and remote monitoring apps and integrated push notifications via Node.js, FCM, and APNs.",
-      tags: ["React Native", "Expo", "Node.js", "FCM", "APNs"],
+      tags: [
+        "React Native",
+        "Expo",
+        "Node.js",
+        "FCM",
+        "APNs",
+        "Xcode",
+        "iOS Simulator",
+        "Android Studio",
+        "Android Simulator",
+        "TestFlight",
+        "App Store Connect",
+      ],
       image: "/window.svg",
       links: [],
       details: {
@@ -256,6 +268,28 @@ export const portfolioData: PortfolioData = {
           href: "https://github.com/asku1990/resume_server",
         },
       ],
+      details: {
+        overview:
+          "A full-stack resume platform built during studies to showcase skills and manage resume content in a structured, customizable format.",
+        sections: [
+          {
+            heading: "Problem",
+            body: "Early in my studies, I wanted a way to showcase my skills, education, and experience in a structured and customizable format beyond a static CV.",
+            bullets: [],
+          },
+          {
+            heading: "Role & approach",
+            body: "I designed and built a full-stack web application to manage resume content, including contact information, language skills, and recommendations. The platform included basic admin functionality for content management and authentication, and was used as a learning and showcase project during my studies.",
+            bullets: [],
+          },
+          {
+            heading: "Outcomes",
+            body: "The project served as a practical full-stack learning experience and a foundation for understanding authentication, data modeling, and deployment. As my portfolio and experience evolved, maintaining a large custom resume platform was no longer necessary, and the project is now kept as a reference rather than an actively developed product.",
+            bullets: [],
+          },
+        ],
+        media: [],
+      },
     },
     {
       title: "Help Tool v1 (Car Management)",
@@ -274,15 +308,65 @@ export const portfolioData: PortfolioData = {
       ],
       image: "/globe.svg",
       links: [{ label: "Repository", href: "https://github.com/asku1990/help-tool-v1" }],
+      details: {
+        overview:
+          "A personal project to centralize vehicle-related data and track running costs and maintenance across multiple cars.",
+        sections: [
+          {
+            heading: "Problem",
+            body: "Managing expenses, maintenance, and fuel consumption across multiple family cars was fragmented and difficult to track consistently over time.",
+            bullets: [],
+          },
+          {
+            heading: "Role & approach",
+            body: "I designed and built a focused web application to centralize vehicle-related data, including expenses, fuel usage, and maintenance history. The application is used to track metrics such as L/100km, cost per kilometer, tire life, and oil changes, keeping all information in one place.",
+            bullets: [],
+          },
+          {
+            heading: "Outcomes",
+            body: "The result is a practical tool that helps monitor running costs and maintenance needs across multiple vehicles. The application provides a clear overview of car-related data and serves as a solid foundation for building additional, focused tools separately if needed.",
+            bullets: [],
+          },
+        ],
+        media: [],
+      },
     },
     {
       title: "Portable Band Saw UI",
       projectType: "Company",
+      company: "Takatalvi Oy",
       description:
         "Designed and implemented part of a Raspberry Pi-based UI for a portable band saw using Python, Tkinter, and MQTT.",
       tags: ["Python", "Tkinter", "MQTT", "Raspberry Pi"],
       image: "/file.svg",
-      links: [{ label: "Details on request", href: "#contact" }],
+      links: [],
+      details: {
+        overview:
+          "Case study on designing and implementing the initial UI and software foundation for a portable band saw, targeting Raspberry Pi with Python and MQTT.",
+        sections: [
+          {
+            heading: "Problem",
+            body: "Takatalvi Oy was developing a portable band saw that required a user interface and supporting software to run on Raspberry Pi devices with wireless communication. The work was in an early development phase.",
+            bullets: [],
+          },
+          {
+            heading: "Role & approach",
+            body: "I designed and implemented the initial UI and software foundation using Python, targeting Raspberry Pi hardware. The focus was on establishing a clear structure and validating the technical approach for the device and its communication.",
+            bullets: [],
+          },
+          {
+            heading: "Technical challenges & solutions",
+            body: "Key challenges included working with limited hardware resources and setting up wireless communication between components. These were addressed using a Python-based UI and MQTT for lightweight messaging.",
+            bullets: [],
+          },
+          {
+            heading: "Outcomes",
+            body: "The result was a solid foundation for the device UI and software architecture. Further development was planned, but my involvement ended when I moved to a new position.",
+            bullets: [],
+          },
+        ],
+        media: [],
+      },
     },
   ],
   skills: {
