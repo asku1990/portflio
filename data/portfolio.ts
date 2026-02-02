@@ -161,8 +161,6 @@ export const portfolioData: PortfolioData = {
       image: "/window.svg",
       links: [],
       details: {
-        overview:
-          "A case study on planning and delivering a solid CMS platform for game content, in close collaboration with the CMS team.",
         sections: [
           {
             heading: "Problem",
@@ -210,8 +208,6 @@ export const portfolioData: PortfolioData = {
       image: "/window.svg",
       links: [],
       details: {
-        overview:
-          "Case study on building iOS and Android prototypes from existing Java applications using React Native and Expo, including configuration and remote monitoring apps and push notifications.",
         sections: [
           {
             heading: "Problem",
@@ -255,8 +251,6 @@ export const portfolioData: PortfolioData = {
         },
       ],
       details: {
-        overview:
-          "A full-stack resume platform built during studies to showcase skills and manage resume content in a structured, customizable format.",
         sections: [
           {
             heading: "Problem",
@@ -295,8 +289,6 @@ export const portfolioData: PortfolioData = {
       image: "/globe.svg",
       links: [{ label: "Repository", href: "https://github.com/asku1990/help-tool-v1" }],
       details: {
-        overview:
-          "A personal project to centralize vehicle-related data and track running costs and maintenance across multiple cars.",
         sections: [
           {
             heading: "Problem",
@@ -327,8 +319,6 @@ export const portfolioData: PortfolioData = {
       image: "/file.svg",
       links: [],
       details: {
-        overview:
-          "Case study on designing and implementing the initial UI and software foundation for a portable band saw, targeting Raspberry Pi with Python and MQTT.",
         sections: [
           {
             heading: "Problem",
