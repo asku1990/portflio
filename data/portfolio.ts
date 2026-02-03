@@ -113,9 +113,11 @@ export const portfolioData: PortfolioData = {
   about: {
     title: "About",
     paragraphs: [
-      "My background includes electrical and automation engineering studies and over ten years in the construction product industry, before transitioning into software development in 2021. I graduated from Oulu University of Applied Sciences (OAMK) with a Bachelor of Engineering in 03/2025 while working in software development roles.",
-      "At Monidor, I built cross-platform prototypes for iOS and Android using React Native and Expo, including configuration and remote monitoring applications. My thesis focused on push notifications in a cross-platform application: a prototype of a routing server and Android/iOS apps.",
-      "Most recently, I worked at BeyondOS across multiple company projects, collaborating closely with the CMS team on a gaming content management system. My work focused on improving user experience.",
+      "I am a web-focused full-stack developer specializing in modern React and Next.js applications, with experience in cross-platform mobile development.",
+      "Most recently, I worked at BeyondOS across multiple company projects, collaborating closely with the CMS team on a gaming content management system. My work focused on improving user experience, content workflows, and reliability while working with a distributed development team.",
+      "At Monidor Oy, I built cross-platform prototypes for iOS and Android using React Native and Expo, including configuration and remote monitoring applications based on existing Java systems. My bachelor's thesis focused on push notifications in a cross-platform application, covering a prototype routing server and Android/iOS apps.",
+      "My background includes electrical and automation engineering studies and over ten years in the construction product industry, before transitioning into software development in 2021. I graduated from Oulu University of Applied Sciences (OAMK) with a Bachelor of Engineering in Information Technology in 03/2025 while working in software development roles.",
+      "My current focus is web application development with Next.js and React, complemented by backend experience with Node.js, SQL databases, and cloud-based deployments.",
     ],
     highlights: [
       {
