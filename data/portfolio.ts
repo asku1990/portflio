@@ -442,6 +442,7 @@ export const portfolioData: PortfolioData = {
         "Developed iOS and Android prototypes from existing Java apps using React Native and Expo.",
         "Built configuration and remote monitoring apps and handled WiFi connectivity features.",
         "Integrated push notifications with a Node.js server using FCM configured for APNs.",
+        "Tested company hardware and products alongside the mobile applications during development.",
       ],
     },
     {
