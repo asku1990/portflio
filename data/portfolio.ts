@@ -62,6 +62,10 @@ export type Skills = {
   title: string;
   description: string;
   groups: SkillGroup[];
+  additionalExperience?: {
+    title: string;
+    description: string;
+  };
 };
 
 export type Experience = {
@@ -412,6 +416,10 @@ export const portfolioData: PortfolioData = {
         items: ["Finnish (Native)", "English (Good)", "Swedish (Basic)"],
       },
     ],
+    additionalExperience: {
+      title: "Additional experience",
+      description: "PHP (maintenance and minor updates to existing codebases)",
+    },
   },
   experience: [
     {

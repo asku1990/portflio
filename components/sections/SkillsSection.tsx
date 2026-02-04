@@ -28,6 +28,12 @@ export function SkillsSection() {
             </Card>
           ))}
         </div>
+        {skills.additionalExperience ? (
+          <div className="space-y-2">
+            <h3 className="text-lg font-semibold">{skills.additionalExperience.title}</h3>
+            <p className="text-muted-foreground">{skills.additionalExperience.description}</p>
+          </div>
+        ) : null}
       </div>
     </section>
   );
