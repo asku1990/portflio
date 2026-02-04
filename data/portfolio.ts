@@ -456,6 +456,19 @@ export const portfolioData: PortfolioData = {
         "Documented UI work and collaborated on hardware and software integration.",
       ],
     },
+    {
+      company: "Rudus Oy",
+      role: "Customer Service Advisor (Palveluneuvoja)",
+      period: "Jan 2022 - Jan 2025",
+      location: "Northern Finland",
+      highlights: [
+        "Handled ready-mix concrete customer service, orders, and delivery scheduling.",
+        "Coordinated drivers and deliveries to construction sites across Northern Finland.",
+        "Managed delivery changes and exceptional situations via phone with customers and production teams.",
+        "Supported aggregates customer service in the early phase, expanding logistics and material flow knowledge.",
+        "On study leave for most of 2024 while completing my BEng in IT at Oulu UAS.",
+      ],
+    },
   ],
   contact: {
     title: "Let's connect",
