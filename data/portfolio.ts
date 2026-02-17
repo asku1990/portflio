@@ -197,7 +197,7 @@ export const portfolioData: PortfolioData = {
       projectType: "Company",
       company: "Monidor Oy",
       description:
-        "Built iOS and Android prototypes from existing Java apps using React Native and Expo. Delivered configuration and remote monitoring apps and integrated push notifications via Node.js, FCM, and APNs.",
+        "Built iOS and Android prototypes from existing Java apps using React Native and Expo. Built custom native modules / platform integrations (Swift/Kotlin) when RN libraries were insufficient (incl. Wi-Fi-related functionality). Integrated push notifications via Node.js service + FCM configured for APNs.",
       tags: [
         "React Native",
         "Expo",
@@ -227,7 +227,7 @@ export const portfolioData: PortfolioData = {
           },
           {
             heading: "Technical challenges & solutions",
-            body: "The main challenge was adding push notifications for iOS without modifying the Java application. This was solved by introducing a Node.js notification service using Firebase Cloud Messaging configured for APNs.",
+            body: "The main challenge was replicating the existing Java application model for iOS and Android without changing the backend. This was solved by using React Native/Expo as the primary approach, building custom native modules / platform integrations (Swift/Kotlin) when RN libraries were insufficient (including Wi-Fi-related functionality), and introducing a Node.js service + FCM configured for APNs for push notifications.",
             bullets: [],
           },
           {
@@ -358,31 +358,15 @@ export const portfolioData: PortfolioData = {
     groups: [
       {
         category: "Frontend",
-        items: [
-          "TypeScript",
-          "Next.js",
-          "React",
-          "Tailwind CSS",
-          "shadcn/ui",
-          "TanStack Query",
-          "React Native",
-          "Expo",
-        ],
+        items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "TanStack Query"],
       },
       {
         category: "Backend",
-        items: [
-          "Node.js",
-          "Express",
-          "PostgreSQL",
-          "MySQL",
-          "Prisma",
-          "Drizzle",
-          "Supabase",
-          "SQL",
-          "JWT",
-          "NextAuth",
-        ],
+        items: ["Node.js", "Express", "MySQL", "PostgreSQL", "Prisma", "Drizzle"],
+      },
+      {
+        category: "Mobile",
+        items: ["React Native", "Expo"],
       },
       {
         category: "Automation and IoT",
@@ -403,7 +387,9 @@ export const portfolioData: PortfolioData = {
           "Bitbucket",
           "Visual Studio Code",
           "Cursor IDE",
-          "OpenAI Codex CLI",
+          "Codex CLI",
+          "ChatGPT",
+          "Claude",
           "Xcode",
           "Android Studio",
           "Notion",
@@ -418,7 +404,8 @@ export const portfolioData: PortfolioData = {
     ],
     additionalExperience: {
       title: "Additional experience",
-      description: "PHP (maintenance and minor updates to existing codebases)",
+      description:
+        "Native iOS/Android integrations (Swift/Kotlin). PHP (maintenance and minor updates).",
     },
   },
   experience: [
@@ -440,8 +427,8 @@ export const portfolioData: PortfolioData = {
       location: "Oulu",
       highlights: [
         "Developed iOS and Android prototypes from existing Java apps using React Native and Expo.",
-        "Built configuration and remote monitoring apps and handled WiFi connectivity features.",
-        "Integrated push notifications with a Node.js server using FCM configured for APNs.",
+        "Built configuration and remote monitoring apps, including custom native integrations (Swift/Kotlin) when RN libraries were insufficient (incl. Wi-Fi-related functionality).",
+        "Integrated push notifications with a Node.js service + FCM configured for APNs.",
         "Tested company hardware and products alongside the mobile applications during development.",
       ],
     },
