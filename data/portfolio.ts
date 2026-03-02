@@ -76,6 +76,13 @@ export type Experience = {
   highlights: string[];
 };
 
+export type Education = {
+  school: string;
+  degree: string;
+  period: string;
+  highlights: string[];
+};
+
 export type Contact = {
   title: string;
   description: string;
@@ -92,6 +99,7 @@ export type PortfolioData = {
   about: About;
   projects: Project[];
   skills: Skills;
+  education: Education[];
   experience: Experience[];
   contact: Contact;
 };
@@ -520,6 +528,36 @@ export const portfolioData: PortfolioData = {
         "Worked in field operations nationwide and coordinated site-level execution with customers and teams.",
         "Maintained and repaired pumping equipment to keep operations safe and reliable.",
         "Served as Area Supervisor in Oulu and the Helsinki metropolitan area.",
+      ],
+    },
+  ],
+  education: [
+    {
+      school: "Oulu University of Applied Sciences",
+      degree: "Degree Programme in Information Technology, Option of Software Development",
+      period: "Jan 2021 - Mar 2025",
+      highlights: [
+        "Software Development",
+        "Web Development",
+        "REST APIs",
+        "React Native",
+        "Mobile Application Development",
+        "Problem Solving",
+        "Troubleshooting",
+        "Teamwork",
+        "Communication",
+      ],
+    },
+    {
+      school: "Ammattiopisto Lappia",
+      degree:
+        "Vocational Qualification in Electrical Engineering, Study Program in Automation Technology and Maintenance, Automation Assembler",
+      period: "Aug 2006 - May 2009",
+      highlights: [
+        "Electrical installations and wiring",
+        "Automation system maintenance",
+        "Electrical components",
+        "Digital control components",
       ],
     },
   ],
