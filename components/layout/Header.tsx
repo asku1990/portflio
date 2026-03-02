@@ -8,12 +8,13 @@ import iconImage from "@/app/icon.png";
 import { portfolioData } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 
-const sectionIds = ["hero", "about", "projects", "skills", "experience", "contact"];
+const sectionIds = ["hero", "about", "projects", "skills", "education", "experience", "contact"];
 
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
+  { label: "Education", href: "#education" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
@@ -104,7 +105,7 @@ export function Header() {
         </nav>
         <Button asChild size="sm">
           <Link href="#contact" onClick={(event) => handleNavClick(event, "contact")}>
-            Let's Talk
+            Let&apos;s Talk
           </Link>
         </Button>
       </div>

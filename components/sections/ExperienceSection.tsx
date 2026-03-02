@@ -13,7 +13,7 @@ export function ExperienceSection() {
           <p className="text-muted-foreground">A quick overview of recent roles and impact.</p>
         </div>
         <div className="grid gap-6">
-          {experience.map((role, index) => (
+          {experience.map((role) => (
             <Card key={`${role.company}-${role.period}`}>
               <CardContent className="space-y-4 p-6">
                 <div className="flex flex-wrap items-center justify-between gap-2">
