@@ -510,6 +510,18 @@ export const portfolioData: PortfolioData = {
         "On study leave for most of 2024 while completing my BEng in IT at Oulu UAS.",
       ],
     },
+    {
+      company: "MR-Pumppaus Oy",
+      role: "Concrete Pump Truck Driver",
+      period: "Feb 2011 - Jan 2022",
+      location: "Finland / On-site",
+      highlights: [
+        "Pumped and transported ready-mixed concrete for construction projects across Finland.",
+        "Worked in field operations nationwide and coordinated site-level execution with customers and teams.",
+        "Maintained and repaired pumping equipment to keep operations safe and reliable.",
+        "Served as Area Supervisor in Oulu and the Helsinki metropolitan area.",
+      ],
+    },
   ],
   contact: {
     title: "Let's connect",
