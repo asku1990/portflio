@@ -240,6 +240,60 @@ export const portfolioData: PortfolioData = {
       },
     },
     {
+      title: "Beagle tietokanta",
+      projectType: "Personal",
+      description:
+        "An in-progress modernization project for Suomen Beaglejärjestö - Finska Beagleklubben ry. The system maintains registry data for beagles in Finland, including shows, trials, and breeding-related data, and is being rebuilt into an easier-to-maintain Next.js + TypeScript + PostgreSQL platform.",
+      tags: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "TanStack Query",
+        "Prisma",
+        "PostgreSQL",
+        "Neon",
+        "Better Auth",
+        "Vercel",
+        "Turborepo",
+        "Vitest",
+        "Playwright",
+      ],
+      image: "/globe.svg",
+      links: [
+        { label: "New Version Preview (In Development)", href: "https://beagle-db-v2.vercel.app/" },
+        {
+          label: "Legacy Version (Current Production)",
+          href: "https://server2.dataseed.fi/~beaglejarjesto/tietokanta/",
+        },
+      ],
+      details: {
+        sections: [
+          {
+            heading: "Problem",
+            body: "Suomen Beaglejärjestö - Finska Beagleklubben ry uses the database to maintain registered beagles in Finland and track important domain data such as show and trial results. Breeders also rely on it for pedigree and planning use cases such as inbreeding coefficient (sukusiitosaste) calculations. The legacy PHP/MariaDB implementation works but is difficult to maintain and extend safely.",
+            bullets: [],
+          },
+          {
+            heading: "Role & approach",
+            body: "I am designing and building a monorepo-based replacement with Next.js, TypeScript, shared contracts, and clear module boundaries across web, server, and DB packages. The target architecture supports public search, authenticated admin routes, incremental migration from the legacy data source, and deployment on Vercel with PostgreSQL on Neon.",
+            bullets: [],
+          },
+          {
+            heading: "Technical challenges & solutions",
+            body: "Main challenges include mapping legacy MariaDB data into a cleaner PostgreSQL schema, preserving important dog/trial/show relationships, and implementing reliable search/filter behavior. I addressed this with Prisma-based schema modeling, import tooling for legacy data, typed API contracts, and feature-scoped implementation for predictable changes. Quality is supported with Vitest unit tests and Playwright end-to-end tests.",
+            bullets: [],
+          },
+          {
+            heading: "Outcomes",
+            body: "The project is under active development. Core architecture, search foundations, and admin-ready routing are in place. A public preview is available for testing search and browsing features, while admin/edit functionality is intentionally restricted. The long-term goal is a modern, reliable, and maintainable replacement for the current production system.",
+            bullets: [],
+          },
+        ],
+        media: [],
+      },
+    },
+    {
       title: "Resume-and-CV Platform",
       projectType: "Personal",
       description:
