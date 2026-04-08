@@ -270,6 +270,7 @@ export const portfolioData: PortfolioData = {
       image: "/globe.svg",
       links: [
         { label: "New Version Preview (In Development)", href: "https://beagle-db-v2.vercel.app/" },
+        { label: "Repository", href: "https://github.com/asku1990/BeagleAppV2" },
         {
           label: "Legacy Version (Current Production)",
           href: "https://server2.dataseed.fi/~beaglejarjesto/tietokanta/",
