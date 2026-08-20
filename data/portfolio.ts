@@ -251,7 +251,7 @@ export const portfolioData: PortfolioData = {
       title: "Beagle tietokanta",
       projectType: "Personal",
       description:
-        "An in-progress modernization project for Suomen Beaglejärjestö - Finska Beagleklubben ry. The system maintains registry data for beagles in Finland, including shows, trials, and breeding-related data, and is being rebuilt into an easier-to-maintain Next.js + TypeScript + PostgreSQL platform.",
+        "An in-progress modernization project for Suomen Beaglejärjestö - Finska Beagleklubben ry. The system maintains registry data for beagles in Finland, including shows, trials, and breeding-related data, and is being rebuilt as a maintainable Next.js, TypeScript, and PostgreSQL platform.",
       tags: [
         "Next.js",
         "React",
@@ -260,9 +260,9 @@ export const portfolioData: PortfolioData = {
         "TanStack Query",
         "Prisma",
         "PostgreSQL",
-        "Neon",
+        "Azure",
+        "Azure Database for PostgreSQL",
         "Better Auth",
-        "Vercel",
         "Turborepo",
         "Vitest",
         "Playwright",
@@ -270,12 +270,12 @@ export const portfolioData: PortfolioData = {
       image: "/globe.svg",
       links: [
         {
-          label: "New Version Preview (In Development)",
+          label: "Production Version",
           href: "https://tietokanta.beaglejarjesto.fi",
         },
         { label: "Repository", href: "https://github.com/asku1990/BeagleAppV2" },
         {
-          label: "Legacy Version (Current Production)",
+          label: "Legacy Version",
           href: "https://dshetz2.dataseed.fi/~beaglejarjesto/tietokanta/index.php",
         },
       ],
@@ -288,17 +288,17 @@ export const portfolioData: PortfolioData = {
           },
           {
             heading: "Role & approach",
-            body: "I am designing and building a monorepo-based replacement with Next.js, TypeScript, shared contracts, and clear module boundaries across web, server, and DB packages. The target architecture supports public search, authenticated admin routes, incremental migration from the legacy data source, and deployment on Vercel with PostgreSQL on Neon.",
+            body: "I am designing and building a monorepo-based replacement with Next.js, TypeScript, shared contracts, and clear module boundaries across web, server, and DB packages. The architecture supports public search, authenticated admin routes, incremental migration from the legacy data source, and production deployment on Azure with Azure Database for PostgreSQL.",
             bullets: [],
           },
           {
             heading: "Technical challenges & solutions",
-            body: "Main challenges include mapping legacy MariaDB data into a cleaner PostgreSQL schema, preserving important dog/trial/show relationships, and implementing reliable search/filter behavior. I addressed this with Prisma-based schema modeling, import tooling for legacy data, typed API contracts, and feature-scoped implementation for predictable changes. Quality is supported with Vitest unit tests and Playwright end-to-end tests.",
+            body: "Main challenges include mapping legacy MariaDB data into a cleaner PostgreSQL schema, preserving important dog/trial/show relationships, and implementing reliable search/filter behavior. I addressed this with Prisma-based schema modeling, import tooling for legacy data, typed API contracts, and feature-scoped implementation. The Azure production environment includes database backups and monitoring, while Vitest and Playwright support application quality.",
             bullets: [],
           },
           {
             heading: "Outcomes",
-            body: "The project is under active development. Core architecture, search foundations, and admin-ready routing are in place. A public preview is available for testing search and browsing features, while admin/edit functionality is intentionally restricted. The long-term goal is a modern, reliable, and maintainable replacement for the current production system.",
+            body: "The project is under active development and deployed in production on Azure. Core architecture, search, and admin routing are in place, while admin/edit functionality remains restricted. The system provides a modern, maintainable foundation for continued migration and development.",
             bullets: [],
           },
         ],
@@ -536,6 +536,20 @@ export const portfolioData: PortfolioData = {
     },
   ],
   education: [
+    {
+      school: "Opiframe Oy",
+      degree:
+        "Practical Full-stack Developer Training (RekryKoulutus), supported by Oulun seudun työllisyysalue",
+      period: "Jun 2026 - Present",
+      highlights: [
+        ".NET / C#",
+        "Angular",
+        "SQL Server",
+        "Azure",
+        "REST APIs",
+        "AI-assisted Development",
+      ],
+    },
     {
       school: "Oulu University of Applied Sciences",
       degree: "Degree Programme in Information Technology, Option of Software Development",
