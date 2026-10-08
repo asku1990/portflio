@@ -107,10 +107,10 @@ export type PortfolioData = {
 export const portfolioData: PortfolioData = {
   hero: {
     name: "Aki-Petteri Kuivas",
-    role: "Full-stack Developer",
+    role: "Full-Stack Developer",
     tagline: "Building cross-platform apps and reliable web systems.",
     summary:
-      "Web-focused full-stack developer (Next.js, React) in Oulu, Finland. Open to web and mobile roles.",
+      "Full-stack developer in Oulu, Finland, working with TypeScript, React, Angular, Node.js, and .NET. Open to web and software development roles.",
     location: "Oulu, Finland",
     availability: "Available for web and mobile development roles.",
     ctaPrimary: {
@@ -125,16 +125,17 @@ export const portfolioData: PortfolioData = {
   about: {
     title: "About",
     paragraphs: [
-      "I am a web-focused full-stack developer specializing in modern React and Next.js applications, with experience in cross-platform mobile development.",
-      "Most recently, I worked at BeyondOS across multiple company projects, collaborating closely with the CMS team on a gaming content management system. My work focused on improving user experience, content workflows, and reliability while working with a distributed development team.",
+      "I am a full-stack developer with experience in modern web applications and cross-platform mobile development.",
+      "I am currently completing Full-Stack Developer Training through Opiframe, including work-based training at Coubonga Oy. My current work focuses on full-stack development with Angular, ASP.NET Core, C#, Entity Framework Core, SQL databases, and REST APIs.",
+      "At BeyondOS, I worked across multiple company projects, collaborating closely with the CMS team on a gaming content management system. My work focused on improving user experience, content workflows, and reliability while working with a distributed development team.",
       "At Monidor Oy, I built cross-platform prototypes for iOS and Android using React Native and Expo, including configuration and remote monitoring applications based on existing Java systems. My bachelor's thesis focused on push notifications in a cross-platform application, covering a prototype routing server and Android/iOS apps.",
       "My background includes electrical and automation engineering studies and over ten years in the construction product industry, before transitioning into software development in 2021. I graduated from Oulu University of Applied Sciences (OAMK) with a Bachelor of Engineering in Information Technology in 03/2025 while working in software development roles.",
-      "My current focus is web application development with Next.js and React, complemented by backend experience with Node.js, SQL databases, and cloud-based deployments.",
+      "My current focus is full-stack web development using TypeScript, React, Angular, Node.js, and .NET, supported by experience with relational databases and cloud deployments.",
     ],
     highlights: [
       {
         label: "Most recent role",
-        value: "Full-stack Developer at BeyondOS (Jan 2025 – Jan 2026)",
+        value: "Full-Stack Developer, Work-Based Training at Coubonga Oy (Jun 2026 – Present)",
       },
       {
         label: "Education",
@@ -142,7 +143,7 @@ export const portfolioData: PortfolioData = {
       },
       {
         label: "Focus",
-        value: "Web application development with Next.js and React.",
+        value: "Full-stack web development with TypeScript, React, Angular, Node.js, and .NET.",
       },
       {
         label: "Thesis",
@@ -424,11 +425,34 @@ export const portfolioData: PortfolioData = {
     groups: [
       {
         category: "Frontend",
-        items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "TanStack Query"],
+        items: [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Angular",
+          "Tailwind CSS",
+          "shadcn/ui",
+          "TanStack Query",
+        ],
       },
       {
         category: "Backend",
-        items: ["Node.js", "Express", "MySQL", "PostgreSQL", "Prisma", "Drizzle"],
+        items: [
+          "Node.js",
+          "Express",
+          "ASP.NET Core",
+          "C#",
+          "REST APIs",
+          "Entity Framework Core",
+          "PostgreSQL",
+          "MySQL",
+          "MSSQL",
+          "Prisma",
+          "Drizzle",
+        ],
       },
       {
         category: "Mobile",
@@ -444,6 +468,7 @@ export const portfolioData: PortfolioData = {
           "Git",
           "Docker",
           "AWS (EC2, S3)",
+          "Azure",
           "Postman",
           "Vercel",
           "Netlify",
@@ -453,15 +478,16 @@ export const portfolioData: PortfolioData = {
           "Bitbucket",
           "Visual Studio Code",
           "Cursor IDE",
-          "Codex CLI",
-          "ChatGPT",
-          "Claude",
           "Xcode",
           "Android Studio",
           "Notion",
           "Linear",
           "Jira",
         ],
+      },
+      {
+        category: "AI-assisted development",
+        items: ["Claude Code", "OpenCode", "Codex", "AI agent workflows"],
       },
       {
         category: "Languages",
@@ -476,9 +502,21 @@ export const portfolioData: PortfolioData = {
   },
   experience: [
     {
+      company: "Coubonga Oy",
+      role: "Full-Stack Developer, Work-Based Training",
+      period: "Jun 2026 – Present",
+      location: "Oulu",
+      highlights: [
+        "Part of the Opiframe Full-Stack Developer Training.",
+        "Working with Angular and TypeScript on web application development.",
+        "Working with ASP.NET Core and C# backend development and REST APIs.",
+        "Working with Entity Framework Core and SQL databases as part of practical full-stack development.",
+      ],
+    },
+    {
       company: "BeyondOS",
-      role: "Full-stack Developer",
-      period: "Jan 2025 - Jan 2026",
+      role: "Full-Stack Developer",
+      period: "Jan 2025 – Jan 2026",
       location: "Oulu / Hybrid",
       highlights: [
         "Contributed to a gaming CMS with the CMS team, focusing on user experience and content maintenance workflows.",
@@ -489,7 +527,7 @@ export const portfolioData: PortfolioData = {
     {
       company: "Monidor Oy",
       role: "Trainee Software Developer",
-      period: "Jun 2024 - Dec 2024",
+      period: "Jun 2024 – Dec 2024",
       location: "Oulu",
       highlights: [
         "Developed iOS and Android prototypes from existing Java apps using React Native and Expo.",
@@ -501,7 +539,7 @@ export const portfolioData: PortfolioData = {
     {
       company: "Takatalvi Ltd",
       role: "Trainee",
-      period: "Feb 2024 - May 2024",
+      period: "Feb 2024 – May 2024",
       location: "Oulu",
       highlights: [
         "Designed and implemented parts of a Raspberry Pi-based UI for a portable band saw.",
@@ -512,7 +550,7 @@ export const portfolioData: PortfolioData = {
     {
       company: "Rudus Oy",
       role: "Customer Service Advisor (Palveluneuvoja)",
-      period: "Jan 2022 - Jan 2025",
+      period: "Jan 2022 – Jan 2025",
       location: "Northern Finland",
       highlights: [
         "Handled ready-mix concrete customer service, orders, and delivery scheduling.",
@@ -525,7 +563,7 @@ export const portfolioData: PortfolioData = {
     {
       company: "MR-Pumppaus Oy",
       role: "Concrete Pump Truck Driver",
-      period: "Feb 2011 - Jan 2022",
+      period: "Feb 2011 – Jan 2022",
       location: "Finland / On-site",
       highlights: [
         "Pumped and transported ready-mixed concrete for construction projects across Finland.",
@@ -540,20 +578,24 @@ export const portfolioData: PortfolioData = {
       school: "Opiframe Oy",
       degree:
         "Practical Full-stack Developer Training (RekryKoulutus), supported by Oulun seudun työllisyysalue",
-      period: "Jun 2026 - Present",
+      period: "Jun 2026 – Present",
       highlights: [
-        ".NET / C#",
         "Angular",
-        "SQL Server",
+        "ASP.NET Core",
+        "C#",
+        "Entity Framework Core",
+        "SQL / SQL Server",
         "Azure",
         "REST APIs",
-        "AI-assisted Development",
+        "AI-assisted software development",
+        "AI security",
+        "AI agent development",
       ],
     },
     {
       school: "Oulu University of Applied Sciences",
       degree: "Degree Programme in Information Technology, Option of Software Development",
-      period: "Jan 2021 - Mar 2025",
+      period: "Jan 2021 – Mar 2025",
       highlights: [
         "Software Development",
         "Web Development",
@@ -570,7 +612,7 @@ export const portfolioData: PortfolioData = {
       school: "Ammattiopisto Lappia",
       degree:
         "Vocational Qualification in Electrical Engineering, Study Program in Automation Technology and Maintenance, Automation Assembler",
-      period: "Aug 2006 - May 2009",
+      period: "Aug 2006 – May 2009",
       highlights: [
         "Electrical installations and wiring",
         "Automation system maintenance",
